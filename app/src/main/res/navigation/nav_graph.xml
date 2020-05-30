@@ -9,5 +9,5 @@
         android:id="@+id/main_screen"
         android:name="com.example.esim.main_screen"
         android:label="fragment_main_screen"
-        tools:layout="@layout/fragment_main_screen" />
+        tools:layout="@layout/esim_plans_main_screen" />
 </navigation>

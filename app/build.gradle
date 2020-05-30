@@ -47,4 +47,6 @@ dependencies {
 
     // Testing Navigation
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    implementation "androidx.constraintlayout:constraintlayout:2.0.0-beta6"
 }
