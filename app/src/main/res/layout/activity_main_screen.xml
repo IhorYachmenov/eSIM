@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.example.esim.viewmodel.EsimPlansViewModel" />
@@ -16,6 +18,156 @@
         android:background="@drawable/background_image_blur_and_gradient"
         tools:context=".view.EsimPlansActivity">
 
+        <LinearLayout
+            android:id="@+id/block_main_labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margins"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_flag_main_county"
+                android:layout_width="@dimen/size_circle_image"
+                android:layout_height="@dimen/size_circle_image"
+                android:src="@drawable/ic_flag_usa" />
+
+            <TextView
+                android:id="@+id/label_name_main_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margins_between_main_img_and_label"
+                android:layout_marginEnd="@dimen/margins_between_main_img_and_label"
+                android:text="@string/name_country_usa"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_main_label_of_country" />
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/block_plan_switcher"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_switcher_plan"
+            android:layout_marginStart="@dimen/default_margins"
+            android:layout_marginTop="@dimen/default_margins_medium"
+            android:layout_marginEnd="@dimen/default_margins"
+            android:background="@drawable/shape_rectangle_background_sim_switcher"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/block_main_labels"
+            tools:context=".view.EsimPlansActivity">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".50">
+
+                <TextView
+                    android:id="@+id/esim"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/esim"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_font_switcher_plan" />
+
+                <TextView
+                    android:id="@+id/esim_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_rectangle_btn_background_sim_switcher"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/esim"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_font_switcher_plan"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".50">
+
+                <TextView
+                    android:id="@+id/virtual_numbers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/virtual_numbers"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_font_switcher_plan" />
+
+                <TextView
+                    android:id="@+id/virtual_numbers_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_rectangle_btn_background_sim_switcher"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/virtual_numbers"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_font_switcher_plan"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/block_plan_switcher"
+            android:layout_marginTop="@dimen/default_margins_medium"
+            android:background="@color/line_color"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/block_esim_plans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Yes DATA"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/block_virtual_numbers_plans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margins"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="No DATA"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+

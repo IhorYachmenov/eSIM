@@ -3,4 +3,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="name_country_usa">United States</string>
+    <string name="esim">eSIM</string>
+    <string name="virtual_numbers">Virtual Numbers</string>
 </resources>

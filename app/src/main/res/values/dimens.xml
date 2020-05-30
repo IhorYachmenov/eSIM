@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="default_borders">20dp</dimen>
+    <dimen name="default_margins">20dp</dimen>
+    <dimen name="default_margins_medium">10dp</dimen>
+    <dimen name="default_margins_small">5dp</dimen>
+    <dimen name="size_circle_image">20dp</dimen>
+    <dimen name="size_main_label_of_country">17sp</dimen>
+
+    <dimen name="margins_between_main_img_and_label">8dp</dimen>
+
+    <dimen name="height_switcher_plan">35dp</dimen>
+
+    <dimen name="size_font_switcher_plan">13sp</dimen>
 </resources>
