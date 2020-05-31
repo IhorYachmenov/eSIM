@@ -34,6 +34,7 @@ public class EsimPlansActivity extends AppCompatActivity {
     LinearLayout eSimSwitcherPlan;
     ConstraintLayout eSimPlansTourist;
     ConstraintLayout eSimPlansPremium;
+    ConstraintLayout eSimPlansBusiness;
     ConstraintLayout virtualNumbersPlan;
 
     // Tourist CardView
@@ -114,6 +115,7 @@ public class EsimPlansActivity extends AppCompatActivity {
         eSimSwitcherPlan = findViewById(R.id.block_plan_switcher);
         eSimPlansTourist = findViewById(R.id.block_esim_plan_tourist);
         eSimPlansPremium = findViewById(R.id.block_esim_plan_premium);
+        eSimPlansBusiness = findViewById(R.id.block_esim_plan_business);
         virtualNumbersPlan = findViewById(R.id.block_virtual_numbers_plans);
 
         eSIMButton = findViewById(R.id.esim_button);
@@ -134,6 +136,7 @@ public class EsimPlansActivity extends AppCompatActivity {
                     virtualNumbersPlan.setVisibility(View.VISIBLE);
                     eSimPlansTourist.setVisibility(View.GONE);
                     eSimPlansPremium.setVisibility(View.GONE);
+                    eSimPlansBusiness.setVisibility(View.GONE);
 
 
                 }
@@ -152,6 +155,7 @@ public class EsimPlansActivity extends AppCompatActivity {
                     virtualNumbersPlan.setVisibility(View.GONE);
                     eSimPlansTourist.setVisibility(View.VISIBLE);
                     eSimPlansPremium.setVisibility(View.VISIBLE);
+                    eSimPlansBusiness.setVisibility(View.VISIBLE);
 
                 }
             }

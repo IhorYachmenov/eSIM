@@ -232,7 +232,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <include layout="@layout/cardview_premium"/>
+                    <include layout="@layout/cardview_business"/>
 
                 </androidx.core.widget.NestedScrollView>
 
