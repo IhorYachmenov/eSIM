@@ -313,7 +313,10 @@ public class EsimPlansActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Context context = getApplicationContext();
-                Toast.makeText(context, "TEST", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(context, "TEST", Toast.LENGTH_SHORT).show();
+
+                DialogFragmentUSANetwork dialog = new DialogFragmentUSANetwork();
+                dialog.show(getSupportFragmentManager(),"Open USA Supported Network");
 
             }
         });
