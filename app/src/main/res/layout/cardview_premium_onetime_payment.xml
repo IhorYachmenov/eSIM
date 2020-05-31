@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/expanded_menu_onetime_premium"
+    android:layout_width="match_parent"
+    android:visibility="gone"
+    tool:visibility="visible"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="10dp"
+
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/pay_time">
+
+    <LinearLayout
+        android:id="@+id/first_traffic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/second_traffic"
+        app:layout_constraintTop_toTopOf="@id/expanded_menu_onetime_premium">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="24 hours"
+            android:textAllCaps="true"
+            android:textColor="#640E0D0D"
+            android:textSize="11dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pay_time" />
+
+
+        <GridLayout
+            android:id="@+id/low_data_usage_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="1"
+            android:useDefaultMargins="true">
+
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="95dp"
+                android:layout_height="140dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="95dp"
+                    android:layout_height="140dp">
+
+                    <ImageView
+                        android:id="@+id/icon1.1"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_traffic_image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:src="@drawable/ic_question"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/label1.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/label_name_tariff"
+                        android:textColor="#000000"
+                        android:textSize="6.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/icon1.1" />
+
+                    <TextView
+                        android:id="@+id/amount_of_traffic1.1"
+                        android:layout_width="59dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="15dp"
+                        android:text="100 MB *"
+                        android:textColor="#000000"
+                        android:textSize="13dp"
+                        app:layout_constraintBottom_toTopOf="@id/update1.1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/label1.1" />
+
+                    <TextView
+                        android:id="@+id/update1.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Monthly renew"
+                        android:textColor="#5F000000"
+                        android:textSize="9dp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/amount_of_traffic1.1" />
+
+                    <TextView
+                        android:id="@+id/new_price1.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:text="$0.49"
+                        android:textColor="#000000"
+                        android:textSize="9dp"
+                        app:layout_constraintBottom_toTopOf="@id/buy_now1.1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/old_price1.1"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:background="@drawable/shape_line_old_price"
+                        android:text="$1.99"
+                        android:textColor="#5F000000"
+                        android:textSize="9dp"
+                        app:layout_constraintBottom_toTopOf="@id/buy_now1.1"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <Button
+                        android:id="@+id/buy_now1.1"
+                        style="?android:borderlessButtonStyle"
+                        android:layout_width="75dp"
+                        android:layout_height="23dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/shape_rectangle_btn_background_buy_now"
+                        android:text="Buy now"
+                        android:textAllCaps="false"
+                        android:textColor="#FFF"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="95dp"
+                android:layout_height="140dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="95dp"
+                    android:layout_height="140dp">
+
+                    <ImageView
+                        android:id="@+id/icon1.2"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_traffic_image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:src="@drawable/ic_question"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/label1.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/label_name_tariff"
+                        android:textColor="#000000"
+                        android:textSize="6.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/icon1.2" />
+
+                    <TextView
+                        android:id="@+id/amount_of_traffic1.2"
+                        android:layout_width="59dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="15dp"
+                        android:text="100 MB *"
+                        android:textColor="#000000"
+                        android:textSize="13dp"
+                        app:layout_constraintBottom_toTopOf="@id/update1.2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/label1.2" />
+
+                    <TextView
+                        android:id="@+id/update1.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Monthly renew"
+                        android:textColor="#5F000000"
+                        android:textSize="9dp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/amount_of_traffic1.2" />
+
+                    <TextView
+                        android:id="@+id/new_price1.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:text="$0.49"
+                        android:textColor="#000000"
+                        android:textSize="9dp"
+                        app:layout_constraintBottom_toTopOf="@id/buy_now1.2"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/old_price1.2"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:background="@drawable/shape_line_old_price"
+                        android:text="$1.99"
+                        android:textColor="#5F000000"
+                        android:textSize="9dp"
+                        app:layout_constraintBottom_toTopOf="@id/buy_now1.2"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <Button
+                        android:id="@+id/buy_now1.2"
+                        style="?android:borderlessButtonStyle"
+                        android:layout_width="75dp"
+                        android:layout_height="23dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/shape_rectangle_btn_background_buy_now"
+                        android:text="Buy now"
+                        android:textAllCaps="false"
+                        android:textColor="#FFF"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_traffic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_traffic">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3 days"
+            android:textAllCaps="true"
+            android:textColor="#640E0D0D"
+            android:textSize="11dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pay_time" />
+
+
+        <GridLayout
+            android:id="@+id/average_data_using"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="1"
+            android:useDefaultMargins="true">
+
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="95dp"
+                android:layout_height="140dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="95dp"
+                    android:layout_height="140dp">
+
+                    <ImageView
+                        android:id="@+id/icon2.1"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_traffic_image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:src="@drawable/ic_question"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/label2.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/label_name_tariff"
+                        android:textColor="#000000"
+                        android:textSize="6.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/icon2.1" />
+
+                    <TextView
+                        android:id="@+id/amount_of_traffic2.1"
+                        android:layout_width="59dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="15dp"
+                        android:text="100 MB *"
+                        android:textColor="#000000"
+                        android:textSize="13dp"
+                        app:layout_constraintBottom_toTopOf="@id/update2.1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/label2.1" />
+
+                    <TextView
+                        android:id="@+id/update2.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Monthly renew"
+                        android:textColor="#5F000000"
+                        android:textSize="9dp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/amount_of_traffic2.1" />
+
+                    <TextView
+                        android:id="@+id/new_price2.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:text="$0.49"
+                        android:textColor="#000000"
+                        android:textSize="9dp"
+                        app:layout_constraintBottom_toTopOf="@id/buy_now2.1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/old_price2.1"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:background="@drawable/shape_line_old_price"
+                        android:text="$1.99"
+                        android:textColor="#5F000000"
+                        android:textSize="9dp"
+                        app:layout_constraintBottom_toTopOf="@id/buy_now2.1"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <Button
+                        android:id="@+id/buy_now2.1"
+                        style="?android:borderlessButtonStyle"
+                        android:layout_width="75dp"
+                        android:layout_height="23dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/shape_rectangle_btn_background_buy_now"
+                        android:text="Buy now"
+                        android:textAllCaps="false"
+                        android:textColor="#FFF"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="95dp"
+                android:layout_height="140dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="95dp"
+                    android:layout_height="140dp">
+
+                    <ImageView
+                        android:id="@+id/icon2.2"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_traffic_image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:src="@drawable/ic_question"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/label2.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/label_name_tariff"
+                        android:textColor="#000000"
+                        android:textSize="6.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/icon2.2" />
+
+                    <TextView
+                        android:id="@+id/amount_of_traffic2.2"
+                        android:layout_width="59dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="15dp"
+                        android:text="100 MB *"
+                        android:textColor="#000000"
+                        android:textSize="13dp"
+                        app:layout_constraintBottom_toTopOf="@id/update2.2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/label2.2" />
+
+                    <TextView
+                        android:id="@+id/update2.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Monthly renew"
+                        android:textColor="#5F000000"
+                        android:textSize="9dp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/amount_of_traffic2.2" />
+
+                    <TextView
+                        android:id="@+id/new_price2.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:text="$0.49"
+                        android:textColor="#000000"
+                        android:textSize="9dp"
+                        app:layout_constraintBottom_toTopOf="@id/buy_now2.2"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/old_price2.2"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:background="@drawable/shape_line_old_price"
+                        android:text="$1.99"
+                        android:textColor="#5F000000"
+                        android:textSize="9dp"
+                        app:layout_constraintBottom_toTopOf="@id/buy_now2.2"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <Button
+                        android:id="@+id/buy_now2.2"
+                        style="?android:borderlessButtonStyle"
+                        android:layout_width="75dp"
+                        android:layout_height="23dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/shape_rectangle_btn_background_buy_now"
+                        android:text="Buy now"
+                        android:textAllCaps="false"
+                        android:textColor="#FFF"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="95dp"
+                android:layout_height="140dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="95dp"
+                    android:layout_height="140dp">
+
+                    <ImageView
+                        android:id="@+id/icon2.3"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_traffic_image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:src="@drawable/ic_question"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/label2.3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/label_name_tariff"
+                        android:textColor="#000000"
+                        android:textSize="6.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/icon2.3" />
+
+                    <TextView
+                        android:id="@+id/amount_of_traffic2.3"
+                        android:layout_width="59dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="15dp"
+                        android:text="100 MB *"
+                        android:textColor="#000000"
+                        android:textSize="13dp"
+                        app:layout_constraintBottom_toTopOf="@id/update2.3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/label2.3" />
+
+                    <TextView
+                        android:id="@+id/update2.3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Monthly renew"
+                        android:textColor="#5F000000"
+                        android:textSize="9dp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/amount_of_traffic2.3" />
+
+                    <TextView
+                        android:id="@+id/new_price2.3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:text="$0.49"
+                        android:textColor="#000000"
+                        android:textSize="9dp"
+                        app:layout_constraintBottom_toTopOf="@id/buy_now2.3"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/old_price2.3"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:background="@drawable/shape_line_old_price"
+                        android:text="$1.99"
+                        android:textColor="#5F000000"
+                        android:textSize="9dp"
+                        app:layout_constraintBottom_toTopOf="@id/buy_now2.3"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <Button
+                        android:id="@+id/buy_now2.3"
+                        style="?android:borderlessButtonStyle"
+                        android:layout_width="75dp"
+                        android:layout_height="23dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/shape_rectangle_btn_background_buy_now"
+                        android:text="Buy now"
+                        android:textAllCaps="false"
+                        android:textColor="#FFF"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_label"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/second_traffic"
+        app:layout_constraintTop_toBottomOf="@id/second_traffic">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ic_premium_bottom_label_onetime" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Plan include same carrier connection as Tourist!"
+            android:textColor="#000000"
+            android:textSize="10dp" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

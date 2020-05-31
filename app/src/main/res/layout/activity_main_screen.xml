@@ -142,7 +142,7 @@
                 android:background="@color/line_color"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/block_esim_plans"
+                android:id="@+id/block_esim_plan_tourist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/default_margins"
@@ -164,6 +164,81 @@
                 </androidx.core.widget.NestedScrollView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/divider_section_1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/block_esim_plan_tourist"
+                app:layout_constraintBottom_toTopOf="@id/block_esim_plan_premium"
+                android:layout_margin="@dimen/default_margins_small"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/block_esim_plan_premium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="@dimen/default_margins"
+                android:layout_marginEnd="@dimen/default_margins"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_section_1_2">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/scrollview_esim_plans1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <include layout="@layout/cardview_premium"/>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/divider_section_2_3"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/block_esim_plan_premium"
+                app:layout_constraintBottom_toTopOf="@id/block_esim_plan_business"
+                android:layout_margin="@dimen/default_margins_small"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/block_esim_plan_business"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margins"
+                android:layout_marginEnd="@dimen/default_margins"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_section_2_3">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/scrollview_esim_plans2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <include layout="@layout/cardview_premium"/>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/block_virtual_numbers_plans"

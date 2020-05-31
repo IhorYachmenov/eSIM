@@ -32,7 +32,8 @@ public class EsimPlansActivity extends AppCompatActivity {
     TextView virtualNumbersLabel;
 
     LinearLayout eSimSwitcherPlan;
-    ConstraintLayout eSimPlans;
+    ConstraintLayout eSimPlansTourist;
+    ConstraintLayout eSimPlansPremium;
     ConstraintLayout virtualNumbersPlan;
 
     // Tourist CardView
@@ -52,6 +53,23 @@ public class EsimPlansActivity extends AppCompatActivity {
     TextView monthlyTextTouristPayment;
     ImageView monthlyImageTouristPayment;
 
+    // Premium CardView
+
+    ImageView arrowBtnPremium;
+    ImageView infoMainPremium;
+    ConstraintLayout paymentPlanPremium;
+    CardView cardViewPremium;
+    ConstraintLayout expandedMenuPremiumMonthly;
+    ConstraintLayout expandedMenuPremiumOnetime;
+
+    // Premium payment switcher
+
+    SwitchCompat paymentSwitchPremium;
+    TextView oneTimeTextPremiumPayment;
+    ImageView oneTimeImagePremiumPayment;
+    TextView monthlyTextPremiumPayment;
+    ImageView monthlyImagePremiumPayment;
+
 
 
 
@@ -66,7 +84,9 @@ public class EsimPlansActivity extends AppCompatActivity {
         viewModel.onCreate();
         planSwitcher();
         expandPlanTourist();
+        expandPlanPremium();
         planPaymentSwitcherTourist();
+        planPaymentSwitcherPremium();
 
     }
 
@@ -92,7 +112,8 @@ public class EsimPlansActivity extends AppCompatActivity {
     public void planSwitcher() {
 
         eSimSwitcherPlan = findViewById(R.id.block_plan_switcher);
-        eSimPlans = findViewById(R.id.block_esim_plans);
+        eSimPlansTourist = findViewById(R.id.block_esim_plan_tourist);
+        eSimPlansPremium = findViewById(R.id.block_esim_plan_premium);
         virtualNumbersPlan = findViewById(R.id.block_virtual_numbers_plans);
 
         eSIMButton = findViewById(R.id.esim_button);
@@ -111,7 +132,8 @@ public class EsimPlansActivity extends AppCompatActivity {
                     eSIMButton.setVisibility(View.GONE);
 
                     virtualNumbersPlan.setVisibility(View.VISIBLE);
-                    eSimPlans.setVisibility(View.GONE);
+                    eSimPlansTourist.setVisibility(View.GONE);
+                    eSimPlansPremium.setVisibility(View.GONE);
 
 
                 }
@@ -128,7 +150,8 @@ public class EsimPlansActivity extends AppCompatActivity {
                     eSIMButton.setVisibility(View.VISIBLE);
 
                     virtualNumbersPlan.setVisibility(View.GONE);
-                    eSimPlans.setVisibility(View.VISIBLE);
+                    eSimPlansTourist.setVisibility(View.VISIBLE);
+                    eSimPlansPremium.setVisibility(View.VISIBLE);
 
                 }
             }
@@ -165,6 +188,35 @@ public class EsimPlansActivity extends AppCompatActivity {
         });
     }
 
+    public void expandPlanPremium() {
+        arrowBtnPremium = findViewById(R.id.vector_premium);
+        infoMainPremium = findViewById(R.id.question_premium);
+        paymentPlanPremium = findViewById(R.id.payment_plan_premium);
+        cardViewPremium = findViewById(R.id.card_view_premium);
+        expandedMenuPremiumMonthly = findViewById(R.id.expanded_menu_monthly_premium);
+        expandedMenuPremiumOnetime = findViewById(R.id.expanded_menu_onetime_premium);
+
+        arrowBtnPremium.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+            @Override
+            public void onClick(View v) {
+                if (paymentPlanPremium.getVisibility() == View.GONE && expandedMenuPremiumMonthly.getVisibility() == View.GONE) {
+                    TransitionManager.beginDelayedTransition(cardViewPremium, new AutoTransition());
+                    paymentPlanPremium.setVisibility(View.VISIBLE);
+                    expandedMenuPremiumMonthly.setVisibility(View.VISIBLE);
+                    infoMainPremium.setVisibility(View.VISIBLE);
+                    arrowBtnPremium.setImageResource(R.drawable.ic_vector_expand);
+                } else {
+                    TransitionManager.beginDelayedTransition(cardViewPremium, new AutoTransition());
+                    paymentPlanPremium.setVisibility(View.GONE);
+                    expandedMenuPremiumMonthly.setVisibility(View.GONE);
+                    infoMainPremium.setVisibility(View.GONE);
+                    arrowBtnPremium.setImageResource(R.drawable.ic_vector_not);
+                }
+            }
+        });
+    }
+
     public void planPaymentSwitcherTourist() {
 
         paymentSwitchTourist = findViewById(R.id.switch_plan_tourist);
@@ -196,6 +248,44 @@ public class EsimPlansActivity extends AppCompatActivity {
 
                     expandedMenuTouristMonthly.setVisibility(View.GONE);
                     expandedMenuTouristOnetime.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+    }
+
+    public void planPaymentSwitcherPremium() {
+
+        paymentSwitchPremium = findViewById(R.id.switch_plan_premium);
+        oneTimeTextPremiumPayment = findViewById(R.id.one_time_premium);
+        oneTimeImagePremiumPayment = findViewById(R.id.one_time_info_premium);
+        monthlyTextPremiumPayment = findViewById(R.id.monthly_premium);
+        monthlyImagePremiumPayment = findViewById(R.id.monthly_info_premium);
+
+        paymentSwitchPremium.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (paymentSwitchPremium.isChecked()) {
+                    monthlyTextPremiumPayment.setTextColor(Color.WHITE);
+                    monthlyImagePremiumPayment.setColorFilter(Color.WHITE);
+
+                    oneTimeTextPremiumPayment.setTextColor(Color.parseColor("#640E0D0D"));
+                    oneTimeImagePremiumPayment.setColorFilter(Color.parseColor("#640E0D0D"));
+
+                    expandedMenuPremiumMonthly.setVisibility(View.VISIBLE);
+                    expandedMenuPremiumOnetime.setVisibility(View.GONE);
+
+                } else {
+
+                    monthlyTextPremiumPayment.setTextColor(Color.parseColor("#640E0D0D"));
+                    monthlyImagePremiumPayment.setColorFilter(Color.parseColor("#640E0D0D"));
+
+                    oneTimeTextPremiumPayment.setTextColor(Color.WHITE);
+                    oneTimeImagePremiumPayment.setColorFilter(Color.WHITE);
+
+                    expandedMenuPremiumMonthly.setVisibility(View.GONE);
+                    expandedMenuPremiumOnetime.setVisibility(View.VISIBLE);
 
                 }
             }

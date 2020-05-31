@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view_premium"
+    style="@style/CardView.Light"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    app:cardBackgroundColor="@color/grey_with_light_white"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="0dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <ImageView
+            android:id="@+id/plane"
+            android:layout_width="@dimen/width_label_main_esim_plan"
+            android:layout_height="@dimen/height_label_main_esim_plan"
+            android:layout_marginStart="@dimen/default_margins"
+            android:layout_marginTop="@dimen/default_margins_big"
+            android:layout_marginEnd="@dimen/default_margins"
+            android:src="@drawable/ic_premium_plan"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/tourist_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margins"
+            android:layout_marginTop="@dimen/default_margins"
+            android:layout_marginEnd="@dimen/default_margins"
+            android:orientation="vertical"
+
+            app:layout_constraintStart_toEndOf="@id/plane"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_main_premium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_font_label_main_esim_plan"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/question_premium"
+                    android:visibility="gone"
+                    android:layout_width="@dimen/size_info_main_label"
+                    android:layout_height="@dimen/size_info_main_label"
+                    android:layout_marginStart="@dimen/margins_info_main_label"
+                    android:layout_marginEnd="@dimen/margins_info_main_label"
+                    android:src="@drawable/ic_question"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_main_children_premium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_font_label_main_children_esim_plan"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/vector_premium"
+            android:layout_width="@dimen/width_arrow_plan"
+            android:layout_height="@dimen/height_arrow_plan"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/ic_vector_not"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.829"
+            android:layout_marginEnd="@dimen/default_margins_arrow"
+            android:layout_marginStart="@dimen/default_margins_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.493" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/payment_plan_premium"
+            xmlns:tool="http://schemas.android.com/tools"
+            android:visibility="gone"
+            tool:visibility="visible"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="@dimen/default_margins_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tourist_text">
+
+            <LinearLayout
+
+                android:id="@+id/pay_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_payment_plan"
+                android:background="@color/background_color_payment_plan"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/one_time_premium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="@dimen/default_margins_small"
+                    android:layout_marginEnd="@dimen/default_margins_small"
+                    android:text="@string/label_one_time_payment"
+                    android:textColor="@color/payment_plan_unchecked_color"
+                    android:textSize="@dimen/size_font_label_main_payment_plan" />
+
+                <ImageView
+                    android:id="@+id/one_time_info_premium"
+                    android:layout_width="@dimen/size_info_main_children_label"
+                    android:layout_height="@dimen/size_info_main_children_label"
+                    android:layout_marginTop="-4dp"
+                    android:src="@drawable/ic_info_expand"
+                    android:tint="@color/payment_plan_unchecked_color" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_plan_premium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margins_medium"
+                    android:layout_marginEnd="@dimen/default_margins_medium"
+                    android:checked="true"
+                    android:thumb="@drawable/shape_oval_switcher_btn"
+                    app:track="@drawable/shape_rectangle_background_switcher_track"
+
+                    />
+
+                <TextView
+                    android:id="@+id/monthly_premium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:text="@string/label_monthly_payment"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_font_label_main_payment_plan" />
+
+                <ImageView
+                    android:id="@+id/monthly_info_premium"
+                    android:layout_width="@dimen/size_info_main_children_label"
+                    android:layout_height="@dimen/size_info_main_children_label"
+                    android:layout_marginStart="@dimen/default_margins_small"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginEnd="@dimen/default_margins_small"
+                    android:src="@drawable/ic_info_expand" />
+
+            </LinearLayout>
+
+            <include layout="@layout/cardview_premium_monthly_payment"/>
+            <include layout="@layout/cardview_premium_onetime_payment"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
