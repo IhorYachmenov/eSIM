@@ -1,12 +1,17 @@
 package com.example.esim.view;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -14,6 +19,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.cardview.widget.CardView;
@@ -98,8 +104,13 @@ public class EsimPlansActivity extends AppCompatActivity {
         expandPlanPremium();
         planPaymentSwitcherTourist();
         planPaymentSwitcherPremium();
-        openUsaSupportedNetworkDialog();
+
+        //openUsaSupportedNetworkDialog();
+        test_openUsaSupportedNetworkDialog();
+
         openSupportedDevicesDialog();
+
+
 
 
     }
@@ -321,6 +332,8 @@ public class EsimPlansActivity extends AppCompatActivity {
                 DialogFragmentUSANetwork dialog = new DialogFragmentUSANetwork();
                 dialog.show(getSupportFragmentManager(),"Open USA Supported Network");
 
+
+
             }
         });
 
@@ -335,8 +348,43 @@ public class EsimPlansActivity extends AppCompatActivity {
             public void onClick(View v) {
                 DialogFragmentSupportedDevices dialog = new DialogFragmentSupportedDevices();
                 dialog.show(getSupportFragmentManager(), "Open Supported Devices");
+
+
+
+
             }
         });
+
+    }
+
+    public void test_openUsaSupportedNetworkDialog() {
+
+
+        usaSupportedNetworkDialog = findViewById(R.id.block_usa_union);
+
+        usaSupportedNetworkDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final AlertDialog dialog = new AlertDialog.Builder(EsimPlansActivity.this).create();
+                LayoutInflater inflater = getLayoutInflater();
+
+                View convertView = (View) inflater.inflate(R.layout.dialog_fragment_usa_networks, null);
+                dialog.setView(convertView);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); dialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(Color.TRANSPARENT));
+
+                ConstraintLayout closeDialog = (ConstraintLayout) convertView.findViewById(R.id.close_dialog_usa);
+
+
+                closeDialog.setOnClickListener(new View.OnClickListener() { public void onClick(View view) {
+                    dialog.dismiss(); } });
+                dialog.show();
+
+
+
+            }
+        });
+
 
     }
 

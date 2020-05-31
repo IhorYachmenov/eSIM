@@ -22,10 +22,11 @@ public class DialogFragmentUSANetwork extends DialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.dialog_fragment_usa_networks, container, false );
+
         setStyle(STYLE_NO_FRAME, R.style.FullScreenDialogStyle);
 
         closeDialog = view.findViewById(R.id.close_dialog_usa);
-        parentView = view.findViewById(R.id.parent_view_dialog_usa);
+        //parentView = view.findViewById(R.id.parent_view_dialog_usa);
 
 
         closeDialog.setOnClickListener(new View.OnClickListener() {
@@ -38,4 +39,5 @@ public class DialogFragmentUSANetwork extends DialogFragment {
 
         return view;
     }
+
 }

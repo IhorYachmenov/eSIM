@@ -36,6 +36,7 @@ public class DialogFragmentSupportedDevices extends DialogFragment {
 
         openAppleSupportedDevices();
 
+
         return view;
     }
 
