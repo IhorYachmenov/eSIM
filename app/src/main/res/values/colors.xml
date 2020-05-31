@@ -9,7 +9,7 @@
     <color name="black">#000000</color>
     <color name="grey_with_light_white">#F6EFEFEF</color>
 
-    <!-- <color name="grey_with_light_white">#71EFEFEF</color> -->
+    <color name="grey">#71EFEFEF</color>
 
 
     <color name="line_color">#1BEFEFEF</color>

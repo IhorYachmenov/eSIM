@@ -9,6 +9,7 @@
 
     <dimen name="size_circle_image">20dp</dimen>
     <dimen name="size_main_label_of_country">17sp</dimen>
+    <dimen name="size_main_label_region">18sp</dimen>
 
     <dimen name="margins_between_main_img_and_label">8dp</dimen>
     <dimen name="margins_info_main_label">10dp</dimen>
