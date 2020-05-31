@@ -295,7 +295,8 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_margins_medium">
 
 
                         <androidx.constraintlayout.widget.ConstraintLayout
@@ -348,9 +349,6 @@
                 </HorizontalScrollView>
 
 
-
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -362,16 +360,29 @@
 
     </androidx.core.widget.NestedScrollView>
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/supported_divices"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_scroll_block" >
+
         <TextView
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="@dimen/default_margins_big"
             android:layout_width="129dp"
             android:layout_height="15dp"
-            android:background="@drawable/ic_supported_devices"
+            android:background="@drawable/ic_supported_devices" />
 
-            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
