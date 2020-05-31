@@ -360,7 +360,83 @@ public class EsimPlansActivity extends AppCompatActivity {
 
     }
 
+    public void test_openUsaSupportedNetworkDialog() {
 
+
+        usaSupportedNetworkDialog = findViewById(R.id.block_usa_union);
+
+        usaSupportedNetworkDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final Dialog dialog = new Dialog(EsimPlansActivity.this, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setCancelable(false);
+                dialog.setContentView(R.layout.test_dialog_fragment_usa_networks);
+
+                dialog.show();
+
+                ConstraintLayout dialogButton1 = (ConstraintLayout) dialog.findViewById(R.id.close_dialog_usa);
+                dialogButton1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+
+
+            }
+        });
+
+
+    }
+
+    public void test_openSupportedDevicesDialog() {
+
+        supportedDevices = findViewById(R.id.block_supported_divices);
+
+        supportedDevices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final Dialog dialog = new Dialog(EsimPlansActivity.this, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setCancelable(false);
+                dialog.setContentView(R.layout.test_dialog_fragment_supported_devices);
+
+                final ImageView appleListOfDevices = (ImageView) dialog.findViewById(R.id.arrow_apple);
+                final ConstraintLayout appleDevices = (ConstraintLayout) dialog.findViewById(R.id.apple_devices);
+
+                ConstraintLayout dialogButton1 = (ConstraintLayout) dialog.findViewById(R.id.close_dialog_supported_devices);
+                dialogButton1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                appleListOfDevices.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        if (appleDevices.getVisibility() == View.GONE) {
+                            appleListOfDevices.setImageResource(R.drawable.ic_vector_expand);
+                            appleDevices.setVisibility(View.VISIBLE);
+                        } else {
+                            appleListOfDevices.setImageResource(R.drawable.ic_vector_not);
+                            appleDevices.setVisibility(View.GONE);
+                        }
+
+                    }
+                });
+
+                dialog.show();
+
+
+            }
+        });
+    }
 
 
 }
