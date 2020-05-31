@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/apple_devices"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:visibility="gone"
+    tools:visibility="visible"
+    android:layout_marginTop="@dimen/default_margins_medium"
+    app:layout_constraintTop_toBottomOf="@+id/devices"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/devices">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/width_supported_devices"
+            android:layout_height="@dimen/height_supported_devices"
+            android:src="@drawable/apple_iphone_11png"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/model_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margins_medium"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/default_margins_medium"
+            android:text="Apple iPhone 11"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_text_supported_devices_phonename"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/default_margins_small"
+            android:background="#8DBDBCBC"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/model_label"
+            app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v1">
+
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="@dimen/width_supported_devices"
+            android:layout_height="@dimen/height_supported_devices"
+            android:src="@drawable/apple_iphone_11_pro_png"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/model_label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margins_medium"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/default_margins_medium"
+            android:text="Apple iPhone 11 Pro"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_text_supported_devices_phonename"
+            app:layout_constraintStart_toEndOf="@+id/imageView1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/default_margins_small"
+            android:background="#8DBDBCBC"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/model_label1"
+            app:layout_constraintTop_toBottomOf="@id/imageView1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/v3"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v2">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/width_supported_devices"
+            android:layout_height="@dimen/height_supported_devices"
+            android:src="@drawable/apple_iphone_11_pro_max_png"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/model_label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margins_medium"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/default_margins_medium"
+            android:text="Apple iPhone 11 Pro Max"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_text_supported_devices_phonename"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/default_margins_small"
+            android:background="#8DBDBCBC"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/model_label2"
+            app:layout_constraintTop_toBottomOf="@id/imageView2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/v4"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v3">
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/width_supported_devices"
+            android:layout_height="@dimen/height_supported_devices"
+            android:src="@drawable/apple_iphone_11_se_png"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/model_label4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margins_medium"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/default_margins_medium"
+            android:text="Apple iPhone SE"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_text_supported_devices_phonename"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/default_margins_small"
+            android:background="#8DBDBCBC"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/model_label4"
+            app:layout_constraintTop_toBottomOf="@id/imageView4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/v5"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v4">
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="@dimen/width_supported_devices"
+            android:layout_height="@dimen/height_supported_devices"
+            android:src="@drawable/apple_iphone_11_xs_png"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/model_label5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margins_medium"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/default_margins_medium"
+            android:text="Apple iPhone XS"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_text_supported_devices_phonename"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/default_margins_small"
+            android:background="#8DBDBCBC"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/model_label5"
+            app:layout_constraintTop_toBottomOf="@id/imageView5" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/v6"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v5">
+
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="@dimen/width_supported_devices"
+            android:layout_height="@dimen/height_supported_devices"
+            android:src="@drawable/apple_iphone_11_xs_max"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/model_label6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margins_medium"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/default_margins_medium"
+            android:text="Apple iPhone XS Max"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_text_supported_devices_phonename"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/default_margins_small"
+            android:background="#8DBDBCBC"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/model_label6"
+            app:layout_constraintTop_toBottomOf="@id/imageView6" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/v7"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v6">
+
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="@dimen/width_supported_devices"
+            android:layout_height="@dimen/height_supported_devices"
+            android:src="@drawable/apple_iphone_11_xr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/model_label7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margins_medium"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/default_margins_medium"
+            android:text="Apple iPhone XR"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_text_supported_devices_phonename"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/default_margins_small"
+            android:background="#8DBDBCBC"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/model_label7"
+            app:layout_constraintTop_toBottomOf="@id/imageView7" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

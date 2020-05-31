@@ -15,6 +15,7 @@ import com.example.esim.R;
 public class DialogFragmentUSANetwork extends DialogFragment {
 
     private ConstraintLayout closeDialog;
+    private ConstraintLayout parentView;
 
     @Nullable
     @Override
@@ -22,6 +23,10 @@ public class DialogFragmentUSANetwork extends DialogFragment {
 
         View view = inflater.inflate(R.layout.dialog_fragment_usa_networks, container, false );
         closeDialog = view.findViewById(R.id.close_dialog_usa);
+        parentView = view.findViewById(R.id.parent_view_dialog_usa);
+
+        //parentView.getBackground().setAlpha(128);
+
 
         closeDialog.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -77,6 +77,10 @@ public class EsimPlansActivity extends AppCompatActivity {
 
     ConstraintLayout usaSupportedNetworkDialog;
 
+    // Supported devices
+
+    ConstraintLayout supportedDevices;
+
 
 
 
@@ -95,6 +99,8 @@ public class EsimPlansActivity extends AppCompatActivity {
         planPaymentSwitcherTourist();
         planPaymentSwitcherPremium();
         openUsaSupportedNetworkDialog();
+        openSupportedDevicesDialog();
+
 
     }
 
@@ -312,12 +318,23 @@ public class EsimPlansActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Context context = getApplicationContext();
-               // Toast.makeText(context, "TEST", Toast.LENGTH_SHORT).show();
-
                 DialogFragmentUSANetwork dialog = new DialogFragmentUSANetwork();
                 dialog.show(getSupportFragmentManager(),"Open USA Supported Network");
 
+            }
+        });
+
+    }
+
+    public void openSupportedDevicesDialog() {
+
+        supportedDevices = findViewById(R.id.block_supported_divices);
+
+        supportedDevices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragmentSupportedDevices dialog = new DialogFragmentSupportedDevices();
+                dialog.show(getSupportFragmentManager(), "Open Supported Devices");
             }
         });
 

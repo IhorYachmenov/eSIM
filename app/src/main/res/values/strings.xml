@@ -37,6 +37,11 @@
     <string name="dialog_fragment_name_second_carrier_name_networks">4G/LTE, 5G</string>
     <string name="dialog_fragment_label_name">Coverage &amp; Carrier network\nfor United States</string>
 
+    <string name="dialog_fragment_supported_devices_main_label">Supported devices</string>
+    <string name="dialog_fragment_supported_devices_main_children_label">There are 59 devices that supported eSIM.\nWe are updating this list.</string>
+
+
+
 
 
 

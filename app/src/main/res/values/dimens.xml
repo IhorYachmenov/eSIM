@@ -24,6 +24,9 @@
     <dimen name="height_arrow_plan">7.5dp</dimen>
     <dimen name="width_arrow_plan">7.5dp</dimen>
 
+    <dimen name="height_supported_devices">36dp</dimen>
+    <dimen name="width_supported_devices">28dp</dimen>
+
     <dimen name="size_font_switcher_plan">13sp</dimen>
     <dimen name="size_font_label_main_esim_plan">18sp</dimen>
     <dimen name="size_font_label_main_children_esim_plan">13sp</dimen>
@@ -50,6 +53,15 @@
 
     <dimen name="size_table_text_carrier_text_network">15sp</dimen>
     <dimen name="size_text_label_network">18sp</dimen>
+
+
+    <dimen name="size_text_supported_devices_main_label">18sp</dimen>
+    <dimen name="size_text_supported_devices_children_label">13sp</dimen>
+    <dimen name="size_text_supported_devices_name_label">14sp</dimen>
+
+    <dimen name="size_text_supported_devices_phonename">15sp</dimen>
+
+
 
 
 

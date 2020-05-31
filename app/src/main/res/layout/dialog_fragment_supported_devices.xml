@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/default_margins">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/close_dialog_supported_devices"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_margin="@dimen/default_margins_medium"
+            android:background="@drawable/shape_circle_dialog_close_background"
+            app:layout_constraintBottom_toTopOf="@id/dialog_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:background="@drawable/ic_close_dialog_fragment_black_14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/snape_rectangle_dialog_networks"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/close_dialog_supported_devices">
+
+            <LinearLayout
+                android:id="@+id/block_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margins"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="@dimen/size_circle_image"
+                    android:src="@drawable/ic_suported_devices_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margins_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/dialog_fragment_supported_devices_main_label"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_text_supported_devices_main_label"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_margins_small"
+                    android:gravity="center_horizontal"
+                    android:text="@string/dialog_fragment_supported_devices_main_children_label"
+                    android:textColor="@color/color_dialog_supported_devices_text_children_label"
+                    android:textSize="@dimen/size_text_supported_devices_children_label"
+                    android:textStyle="normal" />
+
+                <View
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/default_margins"
+                    android:background="@color/color_dialog_fragment_main_children_line"
+                    android:orientation="horizontal" />
+
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/table_apple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margins"
+
+                app:layout_constraintBottom_toTopOf="@id/table_applewatch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/block_label">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/devices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="APPLE"
+                        android:textColor="@color/color_dialog_supported_devices_color"
+                        android:textSize="@dimen/size_text_supported_devices_name_label"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_apple"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/arrow_apple"
+                        android:layout_width="@dimen/width_arrow_plan"
+                        android:layout_height="@dimen/height_arrow_plan"
+                        android:src="@drawable/ic_vector_not"
+                        android:text="Network"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_apple"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.1dp"
+                        android:layout_marginTop="@dimen/default_margins_small"
+                        android:layout_marginBottom="@dimen/default_margins_small"
+                        android:background="@color/grey_with_light_white"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/arrow_apple" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <include layout="@layout/layout_dialog_apple_devices"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/table_applewatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margins"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/table_apple">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="APPLE WATCH"
+                        android:textColor="@color/color_dialog_supported_devices_color"
+                        android:textSize="@dimen/size_text_supported_devices_name_label"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_applewatch"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/arrow_applewatch"
+                        android:layout_width="@dimen/width_arrow_plan"
+                        android:layout_height="@dimen/height_arrow_plan"
+                        android:src="@drawable/ic_vector_not"
+                        android:text="Network"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_applewatch"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.1dp"
+                        android:layout_marginTop="@dimen/default_margins_small"
+                        android:layout_marginBottom="@dimen/default_margins_small"
+                        android:background="@color/grey_with_light_white"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/arrow_applewatch" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/table_googlepixel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margins"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/table_applewatch">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GOOGLE PIXEL"
+                        android:textColor="@color/color_dialog_supported_devices_color"
+                        android:textSize="@dimen/size_text_supported_devices_name_label"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_googlepixel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/arrow_googlepixel"
+                        android:layout_width="@dimen/width_arrow_plan"
+                        android:layout_height="@dimen/height_arrow_plan"
+                        android:src="@drawable/ic_vector_not"
+                        android:text="Network"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_googlepixel"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.1dp"
+                        android:layout_marginTop="@dimen/default_margins_small"
+                        android:layout_marginBottom="@dimen/default_margins_small"
+                        android:background="@color/grey_with_light_white"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/arrow_googlepixel" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/table_samsung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margins"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/table_googlepixel">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SAMSUNG"
+                        android:textColor="@color/color_dialog_supported_devices_color"
+                        android:textSize="@dimen/size_text_supported_devices_name_label"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_samsung"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/arrow_samsung"
+                        android:layout_width="@dimen/width_arrow_plan"
+                        android:layout_height="@dimen/height_arrow_plan"
+                        android:src="@drawable/ic_vector_not"
+                        android:text="Network"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_samsung"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.1dp"
+                        android:layout_marginTop="@dimen/default_margins_small"
+                        android:layout_marginBottom="@dimen/default_margins_small"
+                        android:background="@color/grey_with_light_white"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/arrow_samsung" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/table_motorolla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margins"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/table_samsung">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MOTOROLLA"
+                        android:textColor="@color/color_dialog_supported_devices_color"
+                        android:textSize="@dimen/size_text_supported_devices_name_label"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_motorolla"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/arrow_motorolla"
+                        android:layout_width="@dimen/width_arrow_plan"
+                        android:layout_height="@dimen/height_arrow_plan"
+                        android:src="@drawable/ic_vector_not"
+                        android:text="Network"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_motorolla"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.1dp"
+                        android:layout_marginTop="@dimen/default_margins_small"
+                        android:layout_marginBottom="@dimen/default_margins_small"
+                        android:background="@color/grey_with_light_white"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/arrow_motorolla" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/table_xiaomi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margins"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/table_motorolla">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XIAOMI"
+                        android:textColor="@color/color_dialog_supported_devices_color"
+                        android:textSize="@dimen/size_text_supported_devices_name_label"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_xiaomi"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/arrow_xiaomi"
+                        android:layout_width="@dimen/width_arrow_plan"
+                        android:layout_height="@dimen/height_arrow_plan"
+                        android:src="@drawable/ic_vector_not"
+                        android:text="Network"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_xiaomi"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.1dp"
+                        android:layout_marginTop="@dimen/default_margins_small"
+                        android:layout_marginBottom="@dimen/default_margins_small"
+                        android:background="@color/grey_with_light_white"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/arrow_xiaomi" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/table_huawei"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margins"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/table_xiaomi">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HUAWEI"
+                        android:textColor="@color/color_dialog_supported_devices_color"
+                        android:textSize="@dimen/size_text_supported_devices_name_label"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_huawei"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/arrow_huawei"
+                        android:layout_width="@dimen/width_arrow_plan"
+                        android:layout_height="@dimen/height_arrow_plan"
+                        android:src="@drawable/ic_vector_not"
+                        android:text="Network"
+                        app:layout_constraintBottom_toBottomOf="@id/arrow_huawei"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.1dp"
+                        android:layout_marginTop="@dimen/default_margins_small"
+                        android:layout_marginBottom="@dimen/default_margins_small"
+                        android:background="@color/grey_with_light_white"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/arrow_huawei" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+

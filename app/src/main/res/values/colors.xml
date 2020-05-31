@@ -30,6 +30,12 @@
 
     <color name="close_dialog_background_color">#D9828282</color>
 
+    <color name="color_dialog_supported_devices_color">#909090</color>
+
+    <color name="color_dialog_supported_devices_text_children_label">#828282</color>
+
+
+
 
 
 
