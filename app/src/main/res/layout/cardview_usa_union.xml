@@ -68,6 +68,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/usa_supported"
                 android:layout_marginStart="@dimen/margins_flags"
                 android:layout_marginEnd="@dimen/margins_flags"
                 android:layout_width="@dimen/size_circle_image"

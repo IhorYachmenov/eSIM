@@ -1,5 +1,6 @@
 package com.example.esim.view;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -71,6 +73,10 @@ public class EsimPlansActivity extends AppCompatActivity {
     TextView monthlyTextPremiumPayment;
     ImageView monthlyImagePremiumPayment;
 
+    // USA supported networks
+
+    ConstraintLayout usaSupportedNetworkDialog;
+
 
 
 
@@ -88,6 +94,7 @@ public class EsimPlansActivity extends AppCompatActivity {
         expandPlanPremium();
         planPaymentSwitcherTourist();
         planPaymentSwitcherPremium();
+        openUsaSupportedNetworkDialog();
 
     }
 
@@ -292,6 +299,22 @@ public class EsimPlansActivity extends AppCompatActivity {
                     expandedMenuPremiumOnetime.setVisibility(View.VISIBLE);
 
                 }
+            }
+        });
+
+    }
+
+    public void openUsaSupportedNetworkDialog() {
+
+        usaSupportedNetworkDialog = findViewById(R.id.block_usa_union);
+
+        usaSupportedNetworkDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Context context = getApplicationContext();
+                Toast.makeText(context, "TEST", Toast.LENGTH_SHORT).show();
+
             }
         });
 
