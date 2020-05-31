@@ -7,9 +7,16 @@
 
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-    <color name="grey_with_light_white">#71EFEFEF</color>
+    <color name="grey_with_light_white">#F6EFEFEF</color>
+
+    <!-- <color name="grey_with_light_white">#71EFEFEF</color> -->
+
 
     <color name="line_color">#1BEFEFEF</color>
 
+    <color name="background_switcher_blue">#FF033680</color>
 
+    <color name="payment_plan_unchecked_color">#640E0D0D</color>
+
+    <color name="background_color_payment_plan">#2779F0</color>
 </resources>

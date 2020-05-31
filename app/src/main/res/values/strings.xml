@@ -7,4 +7,19 @@
     <string name="name_country_usa">United States</string>
     <string name="esim">eSIM</string>
     <string name="virtual_numbers">Virtual Numbers</string>
+
+    <string name="label_main_tourist">Tourist</string>
+    <string name="label_main_children_tourist">Stay connected everywhere</string>
+
+    <string name="label_main_premium">Premium</string>
+    <string name="label_main_children_premium">Get strong network</string>
+
+    <string name="label_main_business">Business</string>
+    <string name="label_main_children_business">Encrypted data plan</string>
+
+    <string name="label_one_time_payment">One time</string>
+    <string name="label_monthly_payment">Monthly</string>
+
+    <string name="label_name_tariff">AT&amp;T</string>
+
 </resources>

@@ -3,12 +3,38 @@
     <dimen name="default_margins">20dp</dimen>
     <dimen name="default_margins_medium">10dp</dimen>
     <dimen name="default_margins_small">5dp</dimen>
+    <dimen name="default_margins_big">30dp</dimen>
+
+    <dimen name="default_margins_arrow">35dp</dimen>
+
     <dimen name="size_circle_image">20dp</dimen>
     <dimen name="size_main_label_of_country">17sp</dimen>
 
     <dimen name="margins_between_main_img_and_label">8dp</dimen>
+    <dimen name="margins_info_main_label">10dp</dimen>
 
     <dimen name="height_switcher_plan">35dp</dimen>
 
+    <dimen name="height_label_main_esim_plan">28dp</dimen>
+    <dimen name="height_payment_plan">33dp</dimen>
+    <dimen name="width_label_main_esim_plan">28dp</dimen>
+    <dimen name="height_arrow_plan">7.5dp</dimen>
+    <dimen name="width_arrow_plan">7.5dp</dimen>
+
     <dimen name="size_font_switcher_plan">13sp</dimen>
+    <dimen name="size_font_label_main_esim_plan">18sp</dimen>
+    <dimen name="size_font_label_main_children_esim_plan">13sp</dimen>
+    <dimen name="size_font_label_main_payment_plan">13sp</dimen>
+
+    <dimen name="size_height_switcher_btn">14dp</dimen>
+    <dimen name="size_width_switcher_btn">14dp</dimen>
+
+    <dimen name="size_width_stroke_switcher_btn">1dp</dimen>
+
+    <dimen name="size_info_main_label">14dp</dimen>
+    <dimen name="size_info_main_children_label">8dp</dimen>
+
+
+    <dimen name="radius_switcher_track">100dp</dimen>
+
 </resources>
