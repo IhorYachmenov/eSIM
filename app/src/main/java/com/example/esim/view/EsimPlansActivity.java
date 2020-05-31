@@ -1,5 +1,6 @@
 package com.example.esim.view;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
@@ -90,6 +91,7 @@ public class EsimPlansActivity extends AppCompatActivity {
 
 
 
+
     EsimPlansViewModel viewModel = new EsimPlansViewModel();
 
     @Override
@@ -108,7 +110,8 @@ public class EsimPlansActivity extends AppCompatActivity {
         //openUsaSupportedNetworkDialog();
         test_openUsaSupportedNetworkDialog();
 
-        openSupportedDevicesDialog();
+        //openSupportedDevicesDialog();
+        test_openSupportedDevicesDialog();
 
 
 
@@ -357,36 +360,7 @@ public class EsimPlansActivity extends AppCompatActivity {
 
     }
 
-    public void test_openUsaSupportedNetworkDialog() {
 
-
-        usaSupportedNetworkDialog = findViewById(R.id.block_usa_union);
-
-        usaSupportedNetworkDialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                final AlertDialog dialog = new AlertDialog.Builder(EsimPlansActivity.this).create();
-                LayoutInflater inflater = getLayoutInflater();
-
-                View convertView = (View) inflater.inflate(R.layout.dialog_fragment_usa_networks, null);
-                dialog.setView(convertView);
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); dialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(Color.TRANSPARENT));
-
-                ConstraintLayout closeDialog = (ConstraintLayout) convertView.findViewById(R.id.close_dialog_usa);
-
-
-                closeDialog.setOnClickListener(new View.OnClickListener() { public void onClick(View view) {
-                    dialog.dismiss(); } });
-                dialog.show();
-
-
-
-            }
-        });
-
-
-    }
 
 
 }
