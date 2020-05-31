@@ -19,6 +19,18 @@
     <color name="payment_plan_unchecked_color">#640E0D0D</color>
 
     <color name="background_color_payment_plan">#2779F0</color>
+    <color name="color_supported_networks">#2779F0</color>
     <color name="light_blue">#719CDA</color>
     <color name="color_background_number_country">#4188EF</color>
+
+    <color name="color_dialog_fragment">#F6EFEFEF</color>
+    <color name="color_dialog_fragment_table_text_name">#2779F0</color>
+    <color name="color_dialog_fragment_main_line">#8EAFAAAA</color>
+    <color name="color_dialog_fragment_main_children_line">#80DDD9D9</color>
+
+    <color name="close_dialog_background_color">#D9828282</color>
+
+
+
+
 </resources>

@@ -48,4 +48,9 @@
 
     <dimen name="radius_switcher_track">100dp</dimen>
 
+    <dimen name="size_table_text_carrier_text_network">15sp</dimen>
+    <dimen name="size_text_label_network">18sp</dimen>
+
+
+
 </resources>

@@ -31,6 +31,15 @@
 
     <string name="number_of_country_european_region">+24</string>
 
+    <string name="dialog_fragment_name_first_carrier_name">AT&amp;T</string>
+    <string name="dialog_fragment_name_second_carrier_name">T-Mobile</string>
+    <string name="dialog_fragment_name_first_carrier_name_networks">2G, 3G, 4G/LTE, 5G</string>
+    <string name="dialog_fragment_name_second_carrier_name_networks">4G/LTE, 5G</string>
+    <string name="dialog_fragment_label_name">Coverage &amp; Carrier network\nfor United States</string>
+
+
+
+
 
 
 </resources>
