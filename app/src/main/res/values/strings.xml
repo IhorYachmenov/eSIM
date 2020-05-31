@@ -22,5 +22,15 @@
     <string name="label_monthly_payment">Monthly</string>
 
     <string name="label_name_tariff">AT&amp;T</string>
+    <string name="name_half_one_european_region">European</string>
+    <string name="name_half_two_european_region">Union</string>
+    <string name="name_half_one_usa_region">United States</string>
+    <string name="name_half_two_usa_region">&amp; Canada</string>
+    <string name="region_name_children_usa">2 countries</string>
+    <string name="region_name_children_european">29 countries</string>
+
+    <string name="number_of_country_european_region">+24</string>
+
+
 
 </resources>

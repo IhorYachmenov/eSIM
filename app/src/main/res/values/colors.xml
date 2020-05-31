@@ -19,4 +19,6 @@
     <color name="payment_plan_unchecked_color">#640E0D0D</color>
 
     <color name="background_color_payment_plan">#2779F0</color>
+    <color name="light_blue">#719CDA</color>
+    <color name="color_background_number_country">#4188EF</color>
 </resources>
