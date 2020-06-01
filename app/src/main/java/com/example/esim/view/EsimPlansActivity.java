@@ -201,13 +201,13 @@ public class EsimPlansActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (paymentPlan.getVisibility() == View.GONE && expandedMenuTouristMonthly.getVisibility() == View.GONE) {
-                    TransitionManager.beginDelayedTransition(cardViewTourist, new AutoTransition());
+
                     paymentPlan.setVisibility(View.VISIBLE);
                     expandedMenuTouristMonthly.setVisibility(View.VISIBLE);
                     infoMain.setVisibility(View.VISIBLE);
                     arrowBtnTourist.setImageResource(R.drawable.ic_vector_expand);
                 } else {
-                    TransitionManager.beginDelayedTransition(cardViewTourist, new AutoTransition());
+
                     paymentPlan.setVisibility(View.GONE);
                     expandedMenuTouristMonthly.setVisibility(View.GONE);
                     expandedMenuTouristOnetime.setVisibility(View.GONE);
@@ -232,13 +232,13 @@ public class EsimPlansActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (paymentPlanPremium.getVisibility() == View.GONE && expandedMenuPremiumMonthly.getVisibility() == View.GONE) {
-                    TransitionManager.beginDelayedTransition(cardViewPremium, new AutoTransition());
+
                     paymentPlanPremium.setVisibility(View.VISIBLE);
                     expandedMenuPremiumMonthly.setVisibility(View.VISIBLE);
                     infoMainPremium.setVisibility(View.VISIBLE);
                     arrowBtnPremium.setImageResource(R.drawable.ic_vector_expand);
                 } else {
-                    TransitionManager.beginDelayedTransition(cardViewPremium, new AutoTransition());
+
                     paymentPlanPremium.setVisibility(View.GONE);
                     expandedMenuPremiumMonthly.setVisibility(View.GONE);
                     expandedMenuPremiumOnetime.setVisibility(View.GONE);
