@@ -210,6 +210,8 @@ public class EsimPlansActivity extends AppCompatActivity {
                     TransitionManager.beginDelayedTransition(cardViewTourist, new AutoTransition());
                     paymentPlan.setVisibility(View.GONE);
                     expandedMenuTouristMonthly.setVisibility(View.GONE);
+                    expandedMenuTouristOnetime.setVisibility(View.GONE);
+                    paymentSwitchTourist.setChecked(true);
                     infoMain.setVisibility(View.GONE);
                     arrowBtnTourist.setImageResource(R.drawable.ic_vector_not);
                 }
@@ -239,6 +241,8 @@ public class EsimPlansActivity extends AppCompatActivity {
                     TransitionManager.beginDelayedTransition(cardViewPremium, new AutoTransition());
                     paymentPlanPremium.setVisibility(View.GONE);
                     expandedMenuPremiumMonthly.setVisibility(View.GONE);
+                    expandedMenuPremiumOnetime.setVisibility(View.GONE);
+                    paymentSwitchPremium.setChecked(true);
                     infoMainPremium.setVisibility(View.GONE);
                     arrowBtnPremium.setImageResource(R.drawable.ic_vector_not);
                 }
